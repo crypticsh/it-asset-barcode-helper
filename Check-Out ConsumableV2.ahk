@@ -100,7 +100,7 @@ imagesearch3: ; Image Search to look for the X and Down arrow in the right of th
 					;MsgBox, Found the checkout button at %FoundX%x%FoundY%, clicking after enter...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
 					Sleep 250
 					Click, %FoundX%, %FoundY%, 1
-					return
+					Goto, VerifySuccessOrFailure
 				}
 			
 			
@@ -111,6 +111,40 @@ imagesearch3: ; Image Search to look for the X and Down arrow in the right of th
 				;MsgBox, The Checkout Button was not found, trying again in 2 seconds				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
 				;Sleep,  2000
 				Goto, ClickTheCheckoutButton
+				}
+			
+			
+			
+			
+			else if ErrorLevel = 2
+				{   
+				MsgBox, Could not conduct search, maybe I could not find the image file?
+				break
+				}	
+			}
+			
+			
+			
+VerifySuccessOrFailure:
+imagesearch4: ; Image search to look for either Success: Consumable checked out successfully --or-- if there was an error
+	Loop {
+		ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *5 %A_ScriptDir%\images\ConsumableCheckedOutSuccessfully.PNG
+			if ErrorLevel = 0
+				{
+					;MsgBox, Found the checkout button at %FoundX%x%FoundY%, clicking after enter...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
+					Sleep 250
+					SoundPlay, %A_ScriptDir%\audio\consumableCheckoutSuccess.mp3
+					return
+				}
+			
+			
+			
+			
+			else if ErrorLevel = 1
+				{   
+				;MsgBox, The Checkout Button was not found, trying again in 2 seconds				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
+				;Sleep,  2000
+				Goto, VerifySuccessOrFailure
 				}
 			
 			
