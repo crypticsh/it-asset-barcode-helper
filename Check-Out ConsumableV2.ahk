@@ -15,6 +15,8 @@ Gui, Submit
 
 ;Open the Snipe IT link of the consumable scanned
 Run, https://demo.snipeitapp.com/consumables/%BinBarcode%/checkout
+
+ClickOnSelectUser:
 imagesearch1 :=
 
 imagesearch1:				; Image search to look for Select a User (to be able to click it)
@@ -53,7 +55,7 @@ imagesearch1:				; Image search to look for Select a User (to be able to click i
 
 
 
-UserSelectionChecker:			
+UserSelectionChecker:
 imagesearch2 :=			
 			
 imagesearch2: ; Image Search to look for the X and Down arrow in the right of the Select a User box that indicated that a user has been selected
@@ -142,9 +144,36 @@ imagesearch4: ; Image search to look for either Success: Consumable checked out 
 			
 			else if ErrorLevel = 1
 				{   
-				;MsgBox, The Checkout Button was not found, trying again in 2 seconds				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
-				;Sleep,  2000
-				Goto, VerifySuccessOrFailure
+				Loop {
+					ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *5 %A_ScriptDir%\images\ConsumableCheckoutError.PNG
+						if ErrorLevel = 0
+							{
+								SoundPlay, %A_ScriptDir%\audio\consumableCheckoutFailure.mp3
+								;MsgBox, Found Error during checkout %FoundX%x%FoundY%, going back to select user				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
+								Sleep 1000
+								Click, %FoundX%, %FoundY%, 1
+								Goto, ClickOnSelectUser
+							}
+						
+						
+						
+						
+						else if ErrorLevel = 1
+							{   
+							;MsgBox, Can't find the checkout error, trying to look for success again			;Delete the semicolon at char 1 here to debug to display popup box with variable in it
+							;Sleep,  2000
+							Goto, VerifySuccessOrFailure
+							}
+						
+						
+						
+						
+						else if ErrorLevel = 2
+							{   
+							MsgBox, Could not conduct search, maybe I could not find the image file?
+							break
+							}	
+					}
 				}
 			
 			
