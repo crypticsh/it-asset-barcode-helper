@@ -4,18 +4,17 @@
 * Multiple input modes
 * TTS for most prompts (if I remember)
 * Quick processing of the differnet tasks including:
-|Option|Status|
-|---|---|
-|Option|Status|
-
-
-	* Asset Check-Out	(Not Started)*
-	* Asset Check-In	(Not Started)*
-	* Consumable Check-Out (Testing)
-	* Accessory Check-Out	(Not Started)*
-	* Accessory Check-In	(Not Started)*
-	* License Check-Out	(Not Started)*
-	* License Check-In	(Not Started)*
+	* Asset Check-Out	*(Not Started)*
+	* Asset Check-In	*(Not Started)*
+	* Consumable Check-Out *(Testing)
+	* Accessory Check-Out	*(*Not Started)*
+	* Accessory Check-In	*(Not Started)*
+	* License Check-Out	*(Not Started)*
+	* License Check-In	*(Not Started)*
+	
+| Command    | Description |
+|:----------:|-------------|
+| **`gdex`** |     test    |
 	
 
 ## General
