@@ -4,10 +4,11 @@
 * Multiple input modes
 * TTS for most prompts (if I remember)
 * Quick processing of the differnet tasks including:
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+|   |   |   |   |   |
+|---|---|---|---|---|
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
 
 	* Asset Check-Out	(Not Started)*
 	* Asset Check-In	(Not Started)*
