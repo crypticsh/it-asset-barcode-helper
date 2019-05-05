@@ -4,11 +4,10 @@
 * Multiple input modes
 * TTS for most prompts (if I remember)
 * Quick processing of the differnet tasks including:
-|   |   |   |   |   |
-|---|---|---|---|---|
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
+|Option|Status|
+|---|---|
+|Option|Status|
+
 
 	* Asset Check-Out	(Not Started)*
 	* Asset Check-In	(Not Started)*
