@@ -3,4 +3,4 @@
 ## General
 The scenerio this will be used in, is a checkout computer (touch screen friendly(ish)) with a scanner (preferably, but not required)
 
-! [Menu] (/images/menu.png)
+! [Menu] (/readmeImages/menu.png)
