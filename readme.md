@@ -14,7 +14,12 @@
 	
 | Command    | Description |
 |:----------:|-------------|
-| **`gdex`** |     test    |
+| **`Asset Check-In`** |     Not Started    |
+| **`Consumable Check-Out`** |     In Process    |
+| **`Accessory Check-Out`** |     Not Started    |
+| **`Accessory Check-In`** |     Not Started    |
+| **`License Check-Out`** |     Not Started    |
+| **`License Check-In`** |     Not Started    |
 	
 
 ## General
