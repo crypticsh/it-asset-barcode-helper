@@ -12,7 +12,7 @@
 	* License Check-Out	*(Not Started)*
 	* License Check-In	*(Not Started)*
 	
-| Command    | Description |
+| Option    | Status |
 |:----------:|-------------|
 | **`Asset Check-In`** |     Not Started    |
 | **`Consumable Check-Out`** |     In Process    |
