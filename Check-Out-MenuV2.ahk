@@ -71,41 +71,56 @@ Goto, A9
 
 A1:
 SoundPlay, thisfiledoesnotexist.mp3
-msgbox,Clicked %f1% running proper 2ndary ahk script...
-Run, %A_ScriptDir%\Check-Out ConsumableV2.ahk
+;msgbox,Clicked %f1% running proper 2ndary ahk script...
+Run, %A_ScriptDir%\subScripts\1.ahk
 return
 
 
 A2:
-msgbox,Clicked %f2%
+SoundPlay, thisfiledoesnotexist.mp3
+;msgbox,Clicked %f1% running proper 2ndary ahk script...
+Run, %A_ScriptDir%\subScripts\2.ahk
 return
 
 A3:
-msgbox,Clicked %f3%
+SoundPlay, thisfiledoesnotexist.mp3
+Run, %A_ScriptDir%\subScripts\3.ahk
 return
 
 A4:
-msgbox,Clicked %f4%
+;msgbox,Clicked %f4%
+SoundPlay, thisfiledoesnotexist.mp3
+Run, %A_ScriptDir%\subScripts\4.ahk
 return
 
 A5:
-msgbox,Clicked %f5%
+;msgbox,Clicked %f5%
+SoundPlay, thisfiledoesnotexist.mp3
+Run, %A_ScriptDir%\subScripts\5.ahk
 return
 
 A6:
-msgbox,Clicked %f6%
+;msgbox,Clicked %f6%
+SoundPlay, thisfiledoesnotexist.mp3
+Run, %A_ScriptDir%\subScripts\6.ahk
 return
 
 A7:
-msgbox,Clicked %f7%
+;msgbox,Clicked %f7%
+SoundPlay, thisfiledoesnotexist.mp3
+Run, %A_ScriptDir%\subScripts\7.ahk
 return
 
 A8:
-msgbox,Clicked %f8%
+;msgbox,Clicked %f8%
+SoundPlay, thisfiledoesnotexist.mp3
+Run, %A_ScriptDir%\subScripts\8.ahk
 return
 
 A9:
-msgbox,Clicked %f9%
+;msgbox,Clicked %f9%
+SoundPlay, thisfiledoesnotexist.mp3
+Run, %A_ScriptDir%\subScripts\9.ahk
 return
 
 
