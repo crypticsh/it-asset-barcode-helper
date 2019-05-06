@@ -29,7 +29,7 @@ imagesearch1:				; Image search to look for Select a User (to be able to click i
 			if ErrorLevel = 0
 				{
 					;MsgBox, Found the user picker at %FoundX%x%FoundY%, clicking after enter is pressed...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
-					Sleep 1250
+					Sleep 20
 					Click, %FoundX%, %FoundY%, 1
 					;return
 					Sleep 250
