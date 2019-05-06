@@ -3,7 +3,7 @@
 ## Features
 * Multiple input modes
 * TTS for most prompts (if I remember)
-* Quick processing of the differnet tasks including:
+* Quick processing of the different check-out check-in tasks including:
 
 | Option    | Status |
 |:----------:|-------------|
@@ -13,6 +13,17 @@
 | **`Accessory Check-In`** |     Not Started    |
 | **`License Check-Out`** |     Not Started    |
 | **`License Check-In`** |     Not Started    |
+
+I'm also going to be expanding this to incrementing/adding consumables as well:
+
+| Option    | Status |
+|:----------:|-------------|
+| **`New Accessory`** |     Not Started    |
+| **`Increment Existing Accessory`** |     In Process    |
+| **`New Consumable`** |     Not Started    |
+| **`Increment Existing Accessory`** |     Not Started    |
+| **`New Component`** |     Not Started    |
+| **`Increment Existing Component`** |     Not Started    |
 	
 
 ## General
