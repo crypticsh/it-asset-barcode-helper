@@ -1,4 +1,8 @@
-﻿;!b::
+﻿ChromeScaling = 125
+
+
+
+;!b::
 Gui, Destroy
 Gui, Add, Picture, x5 y10 w450 h220 , %A_ScriptDir%\BarcodeImages\ScanBin.PNG
 Gui, Add, Edit, vBinBarcode x160 y240 w120 h20
@@ -21,7 +25,7 @@ imagesearch1 :=
 
 imagesearch1:				; Image search to look for Select a User (to be able to click it)
 	Loop {
-		ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *10 %A_ScriptDir%\images\UserSelectMiddle.PNG
+		ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *10 %A_ScriptDir%\images\%ChromeScaling%-SelectaUser.PNG
 			if ErrorLevel = 0
 				{
 					;MsgBox, Found the user picker at %FoundX%x%FoundY%, clicking after enter is pressed...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
