@@ -7,6 +7,7 @@
 
 | Option    | Status |
 |:----------:|-------------|
+| **`Asset Check-Out`** |     Not Started    |
 | **`Asset Check-In`** |     Not Started    |
 | **`Consumable Check-Out`** |     In Process    |
 | **`Accessory Check-Out`** |     Not Started    |
