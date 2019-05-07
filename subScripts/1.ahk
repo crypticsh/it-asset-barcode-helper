@@ -15,6 +15,22 @@ return
 OK:
 Gui, Submit
 
+Gui, Destroy
+Gui, Add, Picture, x5 y10 w450 h220 , %A_ScriptDir%\images\%MenuNumber%\User.PNG
+Gui, Add, Picture, x5 y235 w450 h220 , %A_ScriptDir%\images\%MenuNumber%\Asset.PNG
+Gui, Add, Picture, x5 y460 w450 h220 , %A_ScriptDir%\images\%MenuNumber%\Location.PNG
+Gui, Add, Edit, vScannedCode2 x160 y685 w120 h20
+Gui, Add, Button, Default gOK2, OK
+Gui, Add, Text,  x195 y715 w120 h20, or Press ENTER %ScannedCode%
+Gui, Show, xCenter yCenter h735 w450, %Title%
+SoundPlay, %A_ScriptDir%\audio\%MenuNumber%-CheckoutToWhat.mp3
+return
+
+OK2:
+Gui, Submit
+
+
+
 SendMode, Input
 
 Run, %SnipeITURL%
