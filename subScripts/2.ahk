@@ -1,4 +1,4 @@
-﻿ChromeScaling = 125
+﻿IniRead, SnipeITURL, %A_ScriptDir%/config.ini, General, ChromeScaling
 IniRead, SnipeITURL, %A_ScriptDir%/config.ini, General, SnipeITURL
 Title = Asset Check-Out
 MenuNumber = 2
