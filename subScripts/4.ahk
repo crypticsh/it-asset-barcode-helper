@@ -1,5 +1,5 @@
 ﻿ChromeScaling = 125
-SnipeITURL = https://demo.snipeitapp.com
+IniRead, SnipeITURL, %A_ScriptDir%/config.ini, General, SnipeITURL
 Title = Accessory Check-Out
 MenuNumber = 4
 
