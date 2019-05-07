@@ -1,4 +1,5 @@
 ﻿ChromeScaling = 125
+SnipeITURL = https://demo.snipeitapp.com
 
 
 
@@ -18,7 +19,7 @@ Gui, Submit
 ;MsgBox %BinBarcode%				;Delete the semicolon at char 1 here to debug to display popup box with variable in it test
 
 ;Open the Snipe IT link of the consumable scanned
-Run, https://demo.snipeitapp.com/consumables/%BinBarcode%/checkout
+Run, %SnipeITURL%/consumables/%BinBarcode%/checkout
 
 ClickOnSelectUser:
 imagesearch1 :=
