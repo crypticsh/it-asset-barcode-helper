@@ -7,11 +7,11 @@
 
 | Option    | Status |
 |:----------:|-------------|
-| **`Asset Check-Out`** |     Not Started    |
-| **`Asset Check-In`** |     Not Started    |
-| **`Consumable Check-Out`** |     In Process    |
-| **`Accessory Check-Out`** |     Not Started    |
-| **`Accessory Check-In`** |     Not Started    |
+| **`Asset Check-Out`** |     In Progress    |
+| **`Asset Check-In`** |     In Progress    |
+| **`Consumable Check-Out`** |     In Progress    |
+| **`Accessory Check-Out`** |     In Progress    |
+| **`Accessory Check-In`** |     In Progress    |
 | **`License Check-Out`** |     Not Started    |
 | **`License Check-In`** |     Not Started    |
 
@@ -19,12 +19,12 @@ I'm also going to be expanding this to incrementing/adding consumables as well:
 
 | Option    | Status |
 |:----------:|-------------|
-| **`New Accessory`** |     Not Started    |
+| **`New Accessory`** |     In Progress    |
 | **`Increment Existing Accessory`** |     In Process    |
 | **`New Consumable`** |     Not Started    |
-| **`Increment Existing Accessory`** |     Not Started    |
+| **`Increment Existing Consumable`** |     In Progress    |
 | **`New Component`** |     Not Started    |
-| **`Increment Existing Component`** |     Not Started    |
+| **`Increment Existing Component`** |     In Progress    |
 	
 
 ## General
