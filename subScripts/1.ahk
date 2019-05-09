@@ -47,10 +47,10 @@ FormatTime, TimeString,YYMMDDHH24MISS,yyMMddhhmmss
 FileAppend, "C:\Program Files\MySQL\MySQL Workbench 8.0 CE\mysql.exe" %DBName% -u %DBSelectUsername% -p%DBSelectPassword% -h %DBHost% --port %DBPort% -ss -e "SELECT id from assets where asset_tag='%ScannedCode%'" > C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.txt, C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.bat
 Runwait, C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.bat
 
-Sleep, 250
+Sleep, 100
 
 ;read sql output file assigned to variable
-FileRead, idOfTag, C:\Users\nkeller_ladmin\Downloads\%TimeString%.txt
+FileRead, idOfTag, C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.txt
 ;Msgbox, idOfTag is %idOfTag%
 
 Run, %SnipeITURL%/hardware/%idOfTag%
