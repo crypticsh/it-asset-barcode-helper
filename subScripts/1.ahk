@@ -40,7 +40,7 @@ Gui, Submit
 SendMode, Input
 
 FormatTime, TimeString,YYMMDDHH24MISS,yyMMddhhmmss
-'MsgBox The current 24-hour time is %TimeString%.
+;MsgBox The current 24-hour time is %TimeString%.
 
 ; Query DB
 Msgbox, About to run the following:    Click OK to run: "C:\Program Files\MySQL\MySQL Workbench 8.0 CE\mysql.exe" %DBName% -u %DBSelectUsername% -p%DBSelectPassword% -h %DBHost% --port %DBPort% -ss -e "SELECT id from assets where asset_tag='%ScannedCode%'" > C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.txt
