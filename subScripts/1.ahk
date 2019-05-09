@@ -53,7 +53,7 @@ Sleep, 100
 FileRead, idOfTag, C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.txt
 ;Msgbox, idOfTag is %idOfTag%
 
-Run, %SnipeITURL%/hardware/%idOfTag%
+Run, %SnipeITURL%/hardware/%idOfTag%/checkout
 
 
 ExitApp
