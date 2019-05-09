@@ -43,17 +43,17 @@ FormatTime, TimeString,YYMMDDHH24MISS,yyMMddhhmmss
 ;MsgBox The current 24-hour time is %TimeString%.
 
 ; Query DB
-Msgbox, Running: Run, %ComSpec% /c ""C:\Program Files\MySQL\MySQL Workbench 8.0 CE\mysql.exe" "%DBName% -u %DBSelectUsername% -p%DBSelectPassword% -h %DBHost% --port %DBPort% -ss -e "SELECT id from assets where asset_tag='%ScannedCode%'""  >"C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.txt""
 ;Run, C:\Program Files\MySQL\MySQL Workbench 8.0 CE\mysql.exe %DBName% -u %DBSelectUsername% -p%DBSelectPassword% -h %DBHost% --port %DBPort% -ss -e "SELECT id from assets where asset_tag='%ScannedCode%'" > C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.txt
-Run, %ComSpec% /c ""C:\Program Files\MySQL\MySQL Workbench 8.0 CE\mysql.exe" "%DBName% -u %DBSelectUsername% -p%DBSelectPassword% -h %DBHost% --port %DBPort% -ss -e "SELECT id from assets where asset_tag='%ScannedCode%'""  >"C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.txt""
+FileAppend, "C:\Program Files\MySQL\MySQL Workbench 8.0 CE\mysql.exe" %DBName% -u %DBSelectUsername% -p%DBSelectPassword% -h %DBHost% --port %DBPort% -ss -e "SELECT id from assets where asset_tag='%ScannedCode%'" > C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.txt, C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.bat
+Run, C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.bat
 
-Sleep, 5000
+Sleep, 250
 
 ;read sql output file assigned to variable
 FileRead, idOfTag, C:\Users\nkeller_ladmin\Downloads\%TimeString%.txt
 Msgbox, idOfTag is %idOfTag%
 
-Sleep, 1000
+Sleep, 250
 
 Run, %SnipeITURL%/hardware/%idOfTag%
 
