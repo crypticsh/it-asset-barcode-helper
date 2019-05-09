@@ -1,0 +1,9 @@
+[General]
+SnipeITURL=https://demo.snipeitapp.com
+ChromeScaling=125
+[Database]
+DBHost={FQDN of server hosting Snipe DB}
+DBPort={Port for remote connections}
+DBName={DBName}
+DBSelectUsername={USERNAME}
+DBSelectPassword={RANDOMLYGENERATEDPASSWORD}

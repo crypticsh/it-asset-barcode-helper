@@ -1,5 +1,10 @@
-﻿IniRead, SnipeITURL, %A_ScriptDir%/config.ini, General, ChromeScaling
+﻿IniRead, ChromeScaling, %A_ScriptDir%/config.ini, General, ChromeScaling
 IniRead, SnipeITURL, %A_ScriptDir%/config.ini, General, SnipeITURL
+IniRead, DBHost, %A_ScriptDir%/config.ini, Database, DBHost
+IniRead, DBPort, %A_ScriptDir%/config.ini, Database, DBPort
+IniRead, DBName, %A_ScriptDir%/config.ini, Database, DBName
+IniRead, DBSelectUsername, %A_ScriptDir%/config.ini, Database, DBSelectUsername
+IniRead, DBSelectPassword, %A_ScriptDir%/config.ini, Database, DBSelectPassword
 Title = Asset Check-In
 MenuNumber = 1
 
@@ -33,15 +38,21 @@ Gui, Submit
 
 SendMode, Input
 
-Run, %SnipeITURL%
-Sleep 2000
-Send, %ScannedCode% {Enter}
-Sleep 1500
-Send, {LAlt Down}d{LAlt Up}
-Sleep 100
-Send, {End}
-Sleep 100
-Send, '/checkout {Enter}
+FormatTime, TimeString, T12, Time
+MsgBox The current 24-hour time is %TimeString%.
+
+; Query DB
+mysql.exe %DBName% -u %DBSelectUsername% -p%DBSelectPassword% -h %DBHost% --port %DBPort% -ss -e "SELECT id from assets where asset_tag='%ScannedCode%'" > C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.csv
+
+Sleep 1000
+
+;read sql output file assigned to variable
+FileRead, idOfTag, C:\Users\nkeller_ladmin\Downloads\test.txt
+;Msgbox, idOfTag is %idOfTag%
+
+Sleep 500
+
+Run, %SnipeITURL%/hardware/%idOfTag%
 
 
 ExitApp
