@@ -43,12 +43,12 @@ FormatTime, TimeString, T12, Time
 MsgBox The current 24-hour time is %TimeString%.
 
 ; Query DB
-Run, mysql.exe %DBName% -u %DBSelectUsername% -p%DBSelectPassword% -h %DBHost% --port %DBPort% -ss -e "SELECT id from assets where asset_tag='%ScannedCode%'" > C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.csv
+Run, "C:\Program Files\MySQL\MySQL Workbench 8.0 CEmysql.exe" %DBName% -u %DBSelectUsername% -p%DBSelectPassword% -h %DBHost% --port %DBPort% -ss -e "SELECT id from assets where asset_tag='%ScannedCode%'" > C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.txt
 
 Sleep 1000
 
 ;read sql output file assigned to variable
-FileRead, idOfTag, C:\Users\nkeller_ladmin\Downloads\test.txt
+FileRead, idOfTag, C:\Users\nkeller_ladmin\Downloads\%TimeString%.txt
 ;Msgbox, idOfTag is %idOfTag%
 
 Sleep 500
