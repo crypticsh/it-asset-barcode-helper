@@ -54,13 +54,13 @@ If InStr( ScannedCode, "ITS")
 		FileRead, idOfTag, C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.txt
 		;Msgbox, idOfTag is %idOfTag%
 
-		Run, %SnipeITURL%/hardware/%idOfTag%/checkout
+		Run, %SnipeITURL%/hardware/%idOfTag%/checkin
 
 	}
 
 else
 {
-Run, %ScannedCode%/checkout
+Run, %ScannedCode%/checkin
 }
 
 ExitApp
