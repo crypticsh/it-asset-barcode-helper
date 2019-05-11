@@ -12,15 +12,15 @@ F9=%A_ScriptDir%\MenuBarcodes\9.png
 ;	Add Pictures of barcodes to menu
 Gui Add, Picture, gA1 x5 y10 w450 h220,%f1%
 Gui Add, Picture, gA2 x460 y10 w450 h220,%f2%
-Gui Add, Picture, gA3 x915 y10 w450 h220,%f3%
+;Gui Add, Picture, gA3 x915 y10 w450 h220,%f3%
 
-Gui Add, Picture, gA4 x5 y240 w450 h220,%f4%
-Gui Add, Picture, gA5 x460 y240 w450 h220,%f5%
-Gui Add, Picture, gA6 x915 y240 w450 h220,%f6%
+;Gui Add, Picture, gA4 x5 y240 w450 h220,%f4%
+;Gui Add, Picture, gA5 x460 y240 w450 h220,%f5%
+;Gui Add, Picture, gA6 x915 y240 w450 h220,%f6%
 
-Gui Add, Picture, gA7 x5 y470 w450 h220,%f7%
-Gui Add, Picture, gA8 x460 y470 w450 h220,%f8%
-Gui Add, Picture, gA9 x915 y470 w450 h220,%f9%
+;Gui Add, Picture, gA7 x5 y470 w450 h220,%f7%
+;Gui Add, Picture, gA8 x460 y470 w450 h220,%f8%
+;Gui Add, Picture, gA9 x915 y470 w450 h220,%f9%
 
 ;	Add bottom text and buttons and sound
 Gui, Add, Edit, vOptionSelected x600 y800 w120 h20
