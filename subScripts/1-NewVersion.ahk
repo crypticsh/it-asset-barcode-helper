@@ -125,7 +125,7 @@ A1:
 	Sleep, 100
 	Send, {Space}
 	Sleep 5000
-	ExitApp
+	Goto, ClickIfOneOption
 }
 
 
@@ -172,7 +172,7 @@ A2:
 	Sleep, 100
 	Send, {Space}
 	Sleep 5000
-	ExitApp
+	Goto, ClickIfOneOption
 }
 
 A3:
@@ -218,8 +218,49 @@ A3:
 	Sleep, 100
 	Send, {Space}
 	Sleep 5000
+	Goto, ClickIfOneOption
+}
+
+ClickIfOneOption:
+{
+	;msgbox,Clicked %f1% a.k.a. User
+	imagesearch4:				; Image search to look for Select a User (to be able to click it)
+		Loop {
+			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *75 %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-LoadingMoreResults.png
+				if ErrorLevel = 0
+					{
+						;MsgBox, Found the user picker at %FoundX%x%FoundY%, clicking after enter is pressed...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
+						Sleep 20
+						Click, %FoundX%, %FoundY%, 1
+						;return
+						Sleep 250
+						SoundPlay, %A_ScriptDir%\audio\Username.mp3
+						Goto, PostActions4
+					}
+				
+				
+				
+				
+				else if ErrorLevel = 1
+					{   
+					;MsgBox, Not Found2				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
+					imagesearch3 :=
+					}
+				
+				
+				
+				
+				else if ErrorLevel = 2
+					{   
+					MsgBox, Could not conduct search, maybe I could not find the image file?
+					break
+					}	
+				}
+						
+	PostActions4:			
 	ExitApp
 }
+
 
 ExitApp
 
