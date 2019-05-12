@@ -1,5 +1,6 @@
 ﻿IniRead, ChromeScaling, %A_ScriptDir%/config.ini, General, ChromeScaling
 IniRead, SnipeITURL, %A_ScriptDir%/config.ini, General, SnipeITURL
+IniRead, TagPrefix, %A_ScriptDir%/config.ini, General, TagPrefix
 IniRead, DBHost, %A_ScriptDir%/config.ini, Database, DBHost
 IniRead, DBPort, %A_ScriptDir%/config.ini, Database, DBPort
 IniRead, DBName, %A_ScriptDir%/config.ini, Database, DBName
@@ -20,23 +21,22 @@ return
 OK:
 Gui, Submit
 
-;Disabled for now
-;Gui, Destroy
-;Gui, Add, Picture, x5 y10 w450 h220 , %A_ScriptDir%\images\%MenuNumber%\User.PNG
-;Gui, Add, Picture, x5 y235 w450 h220 , %A_ScriptDir%\images\%MenuNumber%\Asset.PNG
-;Gui, Add, Picture, x5 y460 w450 h220 , %A_ScriptDir%\images\%MenuNumber%\Location.PNG
-;Gui, Add, Edit, vScannedCode2 x160 y685 w120 h20
-;Gui, Add, Button, Default gOK2, OK
-;Gui, Add, Text,  x195 y715 w120 h20, or Press ENTER %ScannedCode%
-;Gui, Show, xCenter yCenter h735 w450, %Title%
-;SoundPlay, %A_ScriptDir%\audio\%MenuNumber%-CheckoutToWhat.mp3
-;return
-;
-;OK2:
-;Gui, Submit
+Gui, Destroy
+Gui, Add, Picture, x5 y10 w450 h220 , %A_ScriptDir%\images\%MenuNumber%\User.PNG
+Gui, Add, Picture, x5 y235 w450 h220 , %A_ScriptDir%\images\%MenuNumber%\Asset.PNG
+Gui, Add, Picture, x5 y460 w450 h220 , %A_ScriptDir%\images\%MenuNumber%\Location.PNG
+Gui, Add, Edit, vScannedCode2 x160 y685 w120 h20
+Gui, Add, Button, Default gOK2, OK
+Gui, Add, Text,  x195 y715 w120 h20, or Press ENTER %ScannedCode%
+Gui, Show, xCenter yCenter h735 w450, %Title%
+SoundPlay, %A_ScriptDir%\audio\%MenuNumber%-CheckoutToWhat.mp3
+return
+
+OK2:
+Gui, Submit
 
 
-If InStr( ScannedCode, "ITS")
+If InStr( ScannedCode, "%TagPrefix%")
 	{
 		SendMode, Input
 
@@ -64,3 +64,6 @@ Run, %ScannedCode%/checkin
 }
 
 ExitApp
+
+
+Esc::ExitApp
