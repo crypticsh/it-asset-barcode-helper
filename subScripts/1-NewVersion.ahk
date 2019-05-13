@@ -93,23 +93,24 @@ Run, %ScannedCode%/checkout
 
 Continue2:
 
+MsgBox, ImgOption = %ImgOption%
+
 If ImgOption = A1
 {
 GoTo, A1
 }
-Else If ImgOption = A1
+Else If ImgOption = A2
 {
 GoTo, A2
 }
-Else If ImgOption = A1
+Else If ImgOption = A3
 {
 GoTo, A3
 }
 
 A1:
 {
-	;Run, %ScannedCode%/checkout
-	;msgbox,Clicked %f1% a.k.a. User
+	msgbox,Clicked %f1% a.k.a. User
 	imagesearch1:				; Image search to look for Select a User (to be able to click it)
 		Loop {
 			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *50 %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-UserSelected.PNG
@@ -154,8 +155,7 @@ A1:
 
 A2:
 {
-	;Run, %ScannedCode%/checkout
-	;msgbox,Clicked %f1% a.k.a. User
+	msgbox,Clicked %f2% a.k.a. Asset
 	imagesearch2:				; Image search to look for Select a User (to be able to click it)
 		Loop {
 			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *50 %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-AssetNotSelected.PNG
@@ -200,8 +200,7 @@ A2:
 
 A3:
 {
-	;Run, %ScannedCode%/checkout
-	;msgbox,Clicked %f1% a.k.a. User
+	msgbox,Clicked %f1% a.k.a. Location
 	imagesearch3:				; Image search to look for Select a User (to be able to click it)
 		Loop {
 			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *50 %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-LocationNotSelected.PNG
