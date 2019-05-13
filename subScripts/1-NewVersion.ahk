@@ -43,7 +43,7 @@ OK2:
 Gui, Submit
 
 
-If InStr( ScannedCode, "%TagPrefix%")
+If InStr( ScannedCode, %TagPrefix%)
 	{
 		SendMode, Input
 
@@ -74,18 +74,21 @@ Run, %ScannedCode%/checkout
 
 ;	if statements to go to proper option if option is typed or scanned in instead of being clicked
 if (OptionSelected = 1){
+MsgBox, A1 selected
 Goto, A1
 }
 if (OptionSelected = 2){
+MsgBox, A2 selected
 Goto, A2
 }
 if (OptionSelected = 3){
+MsgBox, A3 selected
 Goto, A3
 }
 
 A1:
 {
-	Run, %ScannedCode%/checkout
+	;Run, %ScannedCode%/checkout
 	;msgbox,Clicked %f1% a.k.a. User
 	imagesearch1:				; Image search to look for Select a User (to be able to click it)
 		Loop {
@@ -131,7 +134,7 @@ A1:
 
 A2:
 {
-	Run, %ScannedCode%/checkout
+	;Run, %ScannedCode%/checkout
 	;msgbox,Clicked %f1% a.k.a. User
 	imagesearch2:				; Image search to look for Select a User (to be able to click it)
 		Loop {
@@ -177,7 +180,7 @@ A2:
 
 A3:
 {
-	Run, %ScannedCode%/checkout
+	;Run, %ScannedCode%/checkout
 	;msgbox,Clicked %f1% a.k.a. User
 	imagesearch3:				; Image search to look for Select a User (to be able to click it)
 		Loop {
