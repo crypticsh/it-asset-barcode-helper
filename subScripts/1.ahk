@@ -195,7 +195,7 @@ A2:
 						
 	PostActions2:			
 	Sleep, 100
-	Send, {Tab 2}
+	Send, {Tab}
 	Sleep, 100
 	Send, {Space}
 	Sleep 5000
@@ -240,7 +240,7 @@ A3:
 						
 	PostActions3:			
 	Sleep, 100
-	Send, {Tab 2}
+	Send, {Tab}
 	Sleep, 100
 	Send, {Space}
 	Sleep 5000
