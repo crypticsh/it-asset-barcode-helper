@@ -232,7 +232,7 @@ ClickIfOneOption:
 	msgbox,Running ClickIfOneOption
 	imagesearch4:				; Image search to look for Select a User (to be able to click it)
 		Loop {
-			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *75 %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-LoadingMoreResults.png
+			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *100 %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-LoadingMoreResults.png
 				if ErrorLevel = 0
 					{
 						MsgBox, Found the Loading more results... at %FoundX%x%FoundY%, pressing enter after ok...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
@@ -250,7 +250,7 @@ ClickIfOneOption:
 				
 				else if ErrorLevel = 1
 					{   
-					;MsgBox, Not Found2				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
+					MsgBox, Loading More Results not found, searching again...			;Delete the semicolon at char 1 here to debug to display popup box with variable in it
 					imagesearch3 :=
 					}
 				
