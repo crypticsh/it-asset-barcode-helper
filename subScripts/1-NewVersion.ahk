@@ -229,7 +229,7 @@ A3:
 
 ClickIfOneOption:
 {
-	;msgbox,Clicked %f1% a.k.a. User
+	msgbox,Running ClickIfOneOption
 	imagesearch4:				; Image search to look for Select a User (to be able to click it)
 		Loop {
 			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *75 %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-LoadingMoreResults.png
