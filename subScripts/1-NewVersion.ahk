@@ -73,6 +73,7 @@ Run, %ScannedCode%/checkout
 
 
 Continue:
+Msgbox, Continuing
 
 ;	if statements to go to proper option if option is typed or scanned in instead of being clicked
 if (OptionSelected = 1){
