@@ -62,6 +62,7 @@ If InStr( ScannedCode, %TagPrefix%)
 		;Msgbox, idOfTag is %idOfTag%
 
 		Run, %SnipeITURL%/hardware/%idOfTag%/checkout
+		GoTo, Continue
 
 	}
 
@@ -71,6 +72,7 @@ Run, %ScannedCode%/checkout
 }
 
 
+Continue:
 
 ;	if statements to go to proper option if option is typed or scanned in instead of being clicked
 if (OptionSelected = 1){
