@@ -61,7 +61,7 @@ ImgOption=A3
 Msgbox, %ImgOption%
 GoTo, Continue
 
-Continue:
+Continue1:
 
 If InStr( ScannedCode, %TagPrefix%)
 	{
@@ -82,7 +82,7 @@ If InStr( ScannedCode, %TagPrefix%)
 		;Msgbox, idOfTag is %idOfTag%
 
 		Run, %SnipeITURL%/hardware/%idOfTag%/checkout
-		GoTo, Continue
+		GoTo, Continue2
 
 	}
 
@@ -92,7 +92,7 @@ Run, %ScannedCode%/checkout
 }
 
 
-Continue:
+Continue2:
 
 A1:
 {
