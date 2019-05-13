@@ -95,14 +95,17 @@ Continue2:
 
 MsgBox, ImgOption = %ImgOption%
 
+MscBox, Trying if matches A1
 If ImgOption = A1
 {
 GoTo, A1
 }
+MscBox, Trying if matches A2
 Else If ImgOption = A2
 {
 GoTo, A2
 }
+MscBox, Trying if matches A3
 Else If ImgOption = A3
 {
 GoTo, A3
