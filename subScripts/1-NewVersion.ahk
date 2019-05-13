@@ -49,14 +49,19 @@ Gui, Submit
 Img1:
 ImgOption=A1
 Msgbox, %ImgOption%
+GoTo, Continue
 
 Img2:
 ImgOption=A2
 Msgbox, %ImgOption%
+GoTo, Continue
 
 Img3:
 ImgOption=A3
 Msgbox, %ImgOption%
+GoTo, Continue
+
+Continue:
 
 If InStr( ScannedCode, %TagPrefix%)
 	{
