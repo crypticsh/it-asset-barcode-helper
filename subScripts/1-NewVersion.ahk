@@ -86,12 +86,12 @@ If InStr( ScannedCode, %TagPrefix%)
 
 	}
 	
-Continue2:
-
 else
 {
 Run, %ScannedCode%/checkout
 }
+
+Continue2:
 
 If ImgOption = A1
 {
