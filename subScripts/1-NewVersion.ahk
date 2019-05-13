@@ -44,6 +44,20 @@ return
 OK2:
 Gui, Submit
 
+;	if statements to go to proper option if option is typed or scanned in instead of being clicked
+if (OptionSelected = 1){
+MsgBox, A1 selected
+Goto, A1
+}
+if (OptionSelected = 2){
+MsgBox, A2 selected
+Goto, A2
+}
+if (OptionSelected = 3){
+MsgBox, A3 selected
+Goto, A3
+}
+
 
 If InStr( ScannedCode, %TagPrefix%)
 	{
@@ -75,20 +89,6 @@ Run, %ScannedCode%/checkout
 
 
 Continue:
-
-;	if statements to go to proper option if option is typed or scanned in instead of being clicked
-if (OptionSelected = 1){
-MsgBox, A1 selected
-Goto, A1
-}
-if (OptionSelected = 2){
-MsgBox, A2 selected
-Goto, A2
-}
-if (OptionSelected = 3){
-MsgBox, A3 selected
-Goto, A3
-}
 
 A1:
 {
