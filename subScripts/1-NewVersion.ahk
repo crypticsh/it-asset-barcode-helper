@@ -23,6 +23,7 @@ Gui, Add, Button, Default gOK, OK
 Gui, Add, Text,  x195 y270 w120 h20, or Press ENTER
 Gui, Show, xCenter yCenter h300 w450, %Title%
 SoundPlay, %A_ScriptDir%\audio\%MenuNumber%.mp3
+Gui Show
 return
 
 OK:
@@ -37,6 +38,7 @@ Gui, Add, Button, Default gOK2, OK
 Gui, Add, Text,  x195 y275 w200 h20, Select the asset location for:  %ScannedCode%
 Gui, Show, xCenter yCenter h300 w1091, %Title%
 SoundPlay, %A_ScriptDir%\audio\%MenuNumber%-CheckoutToWhat.mp3
+Gui Show
 return
 
 OK2:
