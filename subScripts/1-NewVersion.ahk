@@ -49,17 +49,17 @@ Gui, Submit
 Img1:
 ImgOption=A1
 Msgbox, %ImgOption%
-GoTo, Continue
+GoTo, Continue1
 
 Img2:
 ImgOption=A2
 Msgbox, %ImgOption%
-GoTo, Continue
+GoTo, Continue1
 
 Img3:
 ImgOption=A3
 Msgbox, %ImgOption%
-GoTo, Continue
+GoTo, Continue1
 
 Continue1:
 
