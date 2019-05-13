@@ -149,7 +149,7 @@ A1:
 				}	
 	PostActions1:			
 	Sleep, 100
-	Send, {Tab 2}
+	Send, {Tab 1}
 	Sleep, 100
 	Send, {Space}
 	Sleep 5000
