@@ -97,11 +97,11 @@ If ImgOption = A1
 {
 GoTo, A1
 }
-ElseIf ImgOption = A1
+Else If ImgOption = A1
 {
 GoTo, A2
 }
-ElseIf ImgOption = A1
+Else If ImgOption = A1
 {
 GoTo, A3
 }
