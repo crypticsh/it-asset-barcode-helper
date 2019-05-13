@@ -143,7 +143,7 @@ A2:
 						Click, %FoundX%, %FoundY%, 1
 						;return
 						Sleep 250
-						SoundPlay, %A_ScriptDir%\audio\Username.mp3
+						SoundPlay, %A_ScriptDir%\audio\1-CheckoutToAsset.mp3
 						Goto, PostActions2
 					}
 				
@@ -189,7 +189,7 @@ A3:
 						Click, %FoundX%, %FoundY%, 1
 						;return
 						Sleep 250
-						SoundPlay, %A_ScriptDir%\audio\Username.mp3
+						SoundPlay, %A_ScriptDir%\audio\1-CheckoutToLocation.mp3
 						Goto, PostActions3
 					}
 				
