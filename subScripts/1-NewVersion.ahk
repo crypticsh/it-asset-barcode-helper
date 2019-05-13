@@ -29,34 +29,6 @@ return
 OK:
 Gui, Submit
 
-If InStr( ScannedCode, %TagPrefix%)
-	{
-		SendMode, Input
-
-		FormatTime, TimeString,YYMMDDHH24MISS,yyMMddhhmmss
-		;MsgBox The current 24-hour time is %TimeString%.
-
-		; Query DB
-		;Run, C:\Program Files\MySQL\MySQL Workbench 8.0 CE\mysql.exe %DBName% -u %DBSelectUsername% -p%DBSelectPassword% -h %DBHost% --port %DBPort% -ss -e "SELECT id from assets where asset_tag='%ScannedCode%'" > C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.txt
-		FileAppend, "C:\Program Files\MySQL\MySQL Workbench 8.0 CE\mysql.exe" %DBName% -u %DBSelectUsername% -p%DBSelectPassword% -h %DBHost% --port %DBPort% -ss -e "SELECT id from assets where asset_tag='%ScannedCode%'" > C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.txt, C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.bat
-		Runwait, C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.bat
-
-		Sleep, 100
-
-		;read sql output file assigned to variable
-		FileRead, idOfTag, C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.txt
-		;Msgbox, idOfTag is %idOfTag%
-
-		Run, %SnipeITURL%/hardware/%idOfTag%/checkout
-		GoTo, Continue2
-
-	}
-
-else
-{
-Run, %ScannedCode%/checkout
-}
-
 Gui, Destroy
 Gui, Add, Picture, gImg1 x5 y10 w357 h220 , %F1%
 Gui, Add, Picture, gImg2 x367 y10 w357 h220 , %F2%
@@ -91,10 +63,48 @@ GoTo, Continue1
 
 Continue1:
 
+If InStr( ScannedCode, %TagPrefix%)
+	{
+		SendMode, Input
 
+		FormatTime, TimeString,YYMMDDHH24MISS,yyMMddhhmmss
+		;MsgBox The current 24-hour time is %TimeString%.
 
+		; Query DB
+		;Run, C:\Program Files\MySQL\MySQL Workbench 8.0 CE\mysql.exe %DBName% -u %DBSelectUsername% -p%DBSelectPassword% -h %DBHost% --port %DBPort% -ss -e "SELECT id from assets where asset_tag='%ScannedCode%'" > C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.txt
+		FileAppend, "C:\Program Files\MySQL\MySQL Workbench 8.0 CE\mysql.exe" %DBName% -u %DBSelectUsername% -p%DBSelectPassword% -h %DBHost% --port %DBPort% -ss -e "SELECT id from assets where asset_tag='%ScannedCode%'" > C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.txt, C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.bat
+		Runwait, C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.bat
 
+		Sleep, 100
+
+		;read sql output file assigned to variable
+		FileRead, idOfTag, C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.txt
+		;Msgbox, idOfTag is %idOfTag%
+
+		Run, %SnipeITURL%/hardware/%idOfTag%/checkout
+		GoTo, Continue2
+
+	}
+	
 Continue2:
+
+else
+{
+Run, %ScannedCode%/checkout
+}
+
+If ImgOption = A1
+{
+GoTo, A1
+}
+ElseIf ImgOption = A1
+{
+GoTo, A2
+}
+ElseIf ImgOption = A1
+{
+GoTo, A3
+}
 
 A1:
 {
