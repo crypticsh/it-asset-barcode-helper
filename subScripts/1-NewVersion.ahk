@@ -95,17 +95,14 @@ Continue2:
 
 MsgBox, ImgOption = %ImgOption%
 
-MsgBox, Trying if matches A1
 If ImgOption = A1
 {
 GoTo, A1
 }
-MsgBox, Trying if matches A2
 Else If ImgOption = A2
 {
 GoTo, A2
 }
-MsgBox, Trying if matches A3
 Else If ImgOption = A3
 {
 GoTo, A3
