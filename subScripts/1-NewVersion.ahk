@@ -33,9 +33,9 @@ Gui, Destroy
 Gui, Add, Picture, gImg1 x5 y10 w357 h220 , %F1%
 Gui, Add, Picture, gImg2 x367 y10 w357 h220 , %F2%
 Gui, Add, Picture, gImg3 x729 y10 w357 h220 , %F3%
-Gui, Add, Edit, vScannedCode2 x475 y250 w120 h20
-Gui, Add, Button, Default gOK2, OK
-Gui, Add, Text,  x195 y275 w200 h20, Select the asset location for:  %ScannedCode%
+;Gui, Add, Edit, vScannedCode2 x475 y250 w120 h20
+;Gui, Add, Button, Default gOK2, OK
+;Gui, Add, Text,  x195 y275 w200 h20, Select the asset location for:  %ScannedCode%
 Gui, Show, xCenter yCenter h300 w1091, %Title%
 SoundPlay, %A_ScriptDir%\audio\%MenuNumber%-CheckoutToWhat.mp3
 Gui Show
