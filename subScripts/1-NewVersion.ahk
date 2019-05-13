@@ -1,6 +1,7 @@
 ﻿IniRead, ChromeScaling, %A_ScriptDir%/config.ini, General, ChromeScaling
 IniRead, SnipeITURL, %A_ScriptDir%/config.ini, General, SnipeITURL
 IniRead, TagPrefix, %A_ScriptDir%/config.ini, General, TagPrefix
+IniRead, ScanStationUsername, %A_ScriptDir%/config.ini, General, ScanStationUsername
 IniRead, DBHost, %A_ScriptDir%/config.ini, Database, DBHost
 IniRead, DBPort, %A_ScriptDir%/config.ini, Database, DBPort
 IniRead, DBName, %A_ScriptDir%/config.ini, Database, DBName
@@ -71,14 +72,12 @@ If InStr( ScannedCode, %TagPrefix%)
 		;MsgBox The current 24-hour time is %TimeString%.
 
 		; Query DB
-		;Run, C:\Program Files\MySQL\MySQL Workbench 8.0 CE\mysql.exe %DBName% -u %DBSelectUsername% -p%DBSelectPassword% -h %DBHost% --port %DBPort% -ss -e "SELECT id from assets where asset_tag='%ScannedCode%'" > C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.txt
-		FileAppend, "C:\Program Files\MySQL\MySQL Workbench 8.0 CE\mysql.exe" %DBName% -u %DBSelectUsername% -p%DBSelectPassword% -h %DBHost% --port %DBPort% -ss -e "SELECT id from assets where asset_tag='%ScannedCode%'" > C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.txt, C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.bat
-		Runwait, C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.bat
-
+		FileAppend, "C:\Program Files\MySQL\MySQL Workbench 8.0 CE\mysql.exe" %DBName% -u %DBSelectUsername% -p%DBSelectPassword% -h %DBHost% --port %DBPort% -ss -e "SELECT id from assets where asset_tag='%ScannedCode%'" > C:\Users\%ScanStationUsername%\Desktop\DBTemp\%TimeString%.txt, C:\Users\%ScanStationUsername%\Desktop\DBTemp\%TimeString%.bat
+		Runwait, C:\Users\%ScanStationUsername%\Desktop\DBTemp\%TimeString%.bat
 		Sleep, 100
 
 		;read sql output file assigned to variable
-		FileRead, idOfTag, C:\Users\it_assetmgmt\Desktop\DBTemp\%TimeString%.txt
+		FileRead, idOfTag, C:\Users\%ScanStationUsername%\Desktop\DBTemp\%TimeString%.txt
 		;Msgbox, idOfTag is %idOfTag%
 
 		Run, %SnipeITURL%/hardware/%idOfTag%/checkout
@@ -97,14 +96,20 @@ Continue2:
 
 	
 	If ImgOption = A1
+	{
 	MsgBox, Going to A1
 	GoTo, A1
+	}
 	Else If ImgOption = A2
+	{
 	MsgBox, Going to A2
 	GoTo, A2
+	}
 	Else If ImgOption = A3
-	MsgBox, Going to A1
+	{
+	MsgBox, Going to A3
 	GoTo, A3
+	}
 }
 
 A1:

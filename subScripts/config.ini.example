@@ -2,6 +2,7 @@
 SnipeITURL=https://demo.snipeitapp.com
 ChromeScaling=125
 TagPrefix=ITS
+ScanStationUsername={Username}
 [Database]
 DBHost={FQDN of server hosting Snipe DB}
 DBPort={Port for remote connections}
