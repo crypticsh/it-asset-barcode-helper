@@ -235,9 +235,10 @@ ClickIfOneOption:
 			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *75 %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-LoadingMoreResults.png
 				if ErrorLevel = 0
 					{
-						;MsgBox, Found the user picker at %FoundX%x%FoundY%, clicking after enter is pressed...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
+						MsgBox, Found the Loading more results... at %FoundX%x%FoundY%, pressing enter after ok...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
 						Sleep 20
-						Click, %FoundX%, %FoundY%, 1
+						;Click, %FoundX%, %FoundY%, 1
+						Send, {Enter}
 						;return
 						Sleep 250
 						SoundPlay, %A_ScriptDir%\audio\Username.mp3
