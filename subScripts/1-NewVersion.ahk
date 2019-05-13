@@ -49,17 +49,17 @@ Gui, Submit
 
 Img1:
 ImgOption=A1
-Msgbox, %ImgOption%
+;Msgbox, %ImgOption%
 GoTo, Continue1
 
 Img2:
 ImgOption=A2
-Msgbox, %ImgOption%
+;Msgbox, %ImgOption%
 GoTo, Continue1
 
 Img3:
 ImgOption=A3
-Msgbox, %ImgOption%
+;Msgbox, %ImgOption%
 GoTo, Continue1
 
 Continue1:
@@ -92,35 +92,35 @@ Run, %ScannedCode%/checkout
 
 Continue2:
 {
-	MsgBox, ImgOption = %ImgOption%
+	;MsgBox, ImgOption = %ImgOption%
 
 	
 	If ImgOption = A1
 	{
-	MsgBox, Going to A1
+	;MsgBox, Going to A1
 	GoTo, A1
 	}
 	Else If ImgOption = A2
 	{
-	MsgBox, Going to A2
+	;MsgBox, Going to A2
 	GoTo, A2
 	}
 	Else If ImgOption = A3
 	{
-	MsgBox, Going to A3
+	;MsgBox, Going to A3
 	GoTo, A3
 	}
 }
 
 A1:
 {
-	msgbox,Clicked %f1% a.k.a. User
+	;msgbox,Clicked %f1% a.k.a. User
 	imagesearch1:				; Image search to look for Select a User (to be able to click it)
 		Loop {
 			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *50 %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-UserSelected.PNG
 				if ErrorLevel = 0
 					{
-						MsgBox, Found the user picker at %FoundX%x%FoundY%, clicking after enter is pressed...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
+						;MsgBox, Found the user picker at %FoundX%x%FoundY%, clicking after enter is pressed...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
 						Sleep 20
 						Click, %FoundX%, %FoundY%, 1
 						;return
@@ -134,7 +134,7 @@ A1:
 				
 				else if ErrorLevel = 1
 					{   
-					MsgBox, Not Found2				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
+					;MsgBox, Not Found2				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
 					imagesearch1 :=
 					}
 				
@@ -159,13 +159,13 @@ A1:
 
 A2:
 {
-	msgbox,Clicked %f2% a.k.a. Asset
+	;msgbox,Clicked %f2% a.k.a. Asset
 	imagesearch2:				; Image search to look for Select a User (to be able to click it)
 		Loop {
 			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *100 %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-AssetNotSelected.PNG
 				if ErrorLevel = 0
 					{
-						MsgBox, Found the user picker at %FoundX%x%FoundY%, clicking after enter is pressed...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
+						;MsgBox, Found the user picker at %FoundX%x%FoundY%, clicking after enter is pressed...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
 						Sleep 20
 						Click, %FoundX%, %FoundY%, 1
 						;return
@@ -179,7 +179,7 @@ A2:
 				
 				else if ErrorLevel = 1
 					{   
-					MsgBox, Not Found2				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
+					;MsgBox, Not Found2				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
 					imagesearch2 :=
 					}
 				
@@ -204,13 +204,13 @@ A2:
 
 A3:
 {
-	msgbox,Clicked %f1% a.k.a. Location
+	;msgbox,Clicked %f1% a.k.a. Location
 	imagesearch3:				; Image search to look for Select a User (to be able to click it)
 		Loop {
 			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *75 %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-LocationNotSelected.PNG
 				if ErrorLevel = 0
 					{
-						MsgBox, Found the asset at %FoundX%x%FoundY%, clicking after enter is pressed...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
+						;MsgBox, Found the asset at %FoundX%x%FoundY%, clicking after enter is pressed...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
 						Sleep 20
 						Click, %FoundX%, %FoundY%, 1
 						;return
@@ -224,7 +224,7 @@ A3:
 				
 				else if ErrorLevel = 1
 					{   
-					MsgBox, Asset Not Found
+					;MsgBox, Asset Not Found
 					imagesearch3 :=
 					}
 				
@@ -249,13 +249,13 @@ A3:
 
 ClickIfOneOption:
 {
-	msgbox,Running ClickIfOneOption
+	;msgbox,Running ClickIfOneOption
 	imagesearch4:				; Image search to look for Select a User (to be able to click it)
 		Loop {
 			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *100 %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-LoadingMoreResults.png
 				if ErrorLevel = 0
 					{
-						MsgBox, Found the Loading more results... at %FoundX%x%FoundY%, pressing enter after ok...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
+						;MsgBox, Found the Loading more results... at %FoundX%x%FoundY%, pressing enter after ok...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
 						Sleep 20
 						;Click, %FoundX%, %FoundY%, 1
 						Send, {Enter}
@@ -270,7 +270,7 @@ ClickIfOneOption:
 				
 				else if ErrorLevel = 1
 					{   
-					MsgBox, Loading More Results not found, searching again...			;Delete the semicolon at char 1 here to debug to display popup box with variable in it
+					;MsgBox, Loading More Results not found, searching again...			;Delete the semicolon at char 1 here to debug to display popup box with variable in it
 					imagesearch3 :=
 					}
 				
