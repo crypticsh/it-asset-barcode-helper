@@ -45,18 +45,18 @@ OK2:
 Gui, Submit
 
 ;	if statements to go to proper option if option is typed or scanned in instead of being clicked
-if (OptionSelected = A1){
+
+A1:
 MsgBox, A1 selected
 Goto, A1
-}
-if (OptionSelected = A2){
+
+A2:
 MsgBox, A2 selected
 Goto, A2
-}
-if (OptionSelected = A3){
+
+A3:
 MsgBox, A3 selected
 Goto, A3
-}
 
 
 If InStr( ScannedCode, %TagPrefix%)
