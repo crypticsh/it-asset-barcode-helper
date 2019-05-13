@@ -92,20 +92,16 @@ Run, %ScannedCode%/checkout
 }
 
 Continue2:
+{
+	MsgBox, ImgOption = %ImgOption%
 
-MsgBox, ImgOption = %ImgOption%
-
-If ImgOption = A1
-{
-GoTo, A1
-}
-Else If ImgOption = A2
-{
-GoTo, A2
-}
-Else If ImgOption = A3
-{
-GoTo, A3
+	
+	If ImgOption = A1
+	GoTo, A1
+	Else If ImgOption = A2
+	GoTo, A2
+	Else If ImgOption = A3
+	GoTo, A3
 }
 
 A1:
