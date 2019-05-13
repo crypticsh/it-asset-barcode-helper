@@ -47,17 +47,16 @@ Gui, Submit
 ;	if statements to go to proper option if option is typed or scanned in instead of being clicked
 
 Img1:
-MsgBox, A1 selected
-Goto, A1
+ImgOption=A1
+Msgbox, %ImgOption%
 
 Img2:
-MsgBox, A2 selected
-Goto, A2
+ImgOption=A2
+Msgbox, %ImgOption%
 
 Img3:
-MsgBox, A3 selected
-Goto, A3
-
+ImgOption=A3
+Msgbox, %ImgOption%
 
 If InStr( ScannedCode, %TagPrefix%)
 	{
