@@ -30,9 +30,9 @@ OK:
 Gui, Submit
 
 Gui, Destroy
-Gui, Add, Picture, gA1 x5 y10 w357 h220 , %F1%
-Gui, Add, Picture, gA2 x367 y10 w357 h220 , %F2%
-Gui, Add, Picture, gA3 x729 y10 w357 h220 , %F3%
+Gui, Add, Picture, gImg1 x5 y10 w357 h220 , %F1%
+Gui, Add, Picture, gImg2 x367 y10 w357 h220 , %F2%
+Gui, Add, Picture, gImg3 x729 y10 w357 h220 , %F3%
 Gui, Add, Edit, vScannedCode2 x475 y250 w120 h20
 Gui, Add, Button, Default gOK2, OK
 Gui, Add, Text,  x195 y275 w200 h20, Select the asset location for:  %ScannedCode%
@@ -46,15 +46,15 @@ Gui, Submit
 
 ;	if statements to go to proper option if option is typed or scanned in instead of being clicked
 
-A1:
+Img1:
 MsgBox, A1 selected
 Goto, A1
 
-A2:
+Img2:
 MsgBox, A2 selected
 Goto, A2
 
-A3:
+Img3:
 MsgBox, A3 selected
 Goto, A3
 
