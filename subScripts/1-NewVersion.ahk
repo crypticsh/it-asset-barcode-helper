@@ -97,10 +97,13 @@ Continue2:
 
 	
 	If ImgOption = A1
+	MsgBox, Going to A1
 	GoTo, A1
 	Else If ImgOption = A2
+	MsgBox, Going to A2
 	GoTo, A2
 	Else If ImgOption = A3
+	MsgBox, Going to A1
 	GoTo, A3
 }
 
