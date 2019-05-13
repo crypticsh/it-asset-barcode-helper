@@ -158,7 +158,7 @@ A2:
 	msgbox,Clicked %f2% a.k.a. Asset
 	imagesearch2:				; Image search to look for Select a User (to be able to click it)
 		Loop {
-			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *50 %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-AssetNotSelected.PNG
+			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *75 %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-AssetNotSelected.PNG
 				if ErrorLevel = 0
 					{
 						;MsgBox, Found the user picker at %FoundX%x%FoundY%, clicking after enter is pressed...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
@@ -203,7 +203,7 @@ A3:
 	msgbox,Clicked %f1% a.k.a. Location
 	imagesearch3:				; Image search to look for Select a User (to be able to click it)
 		Loop {
-			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *50 %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-LocationNotSelected.PNG
+			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *75 %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-LocationNotSelected.PNG
 				if ErrorLevel = 0
 					{
 						;MsgBox, Found the user picker at %FoundX%x%FoundY%, clicking after enter is pressed...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
