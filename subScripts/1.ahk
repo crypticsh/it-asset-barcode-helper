@@ -64,7 +64,7 @@ GoTo, Continue1
 
 Continue1:
 
-IfInStr, %ScannedCode%, %TagPrefix%
+IfInString, ScannedCode, %TagPrefix%
 	{
 		Msgbox, Found ITS tag
 		SendMode, Input
