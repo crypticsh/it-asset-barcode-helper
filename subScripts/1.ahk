@@ -66,6 +66,7 @@ Continue1:
 
 If InStr( ScannedCode, %TagPrefix%)
 	{
+		Msgbox, Found ITS tag
 		SendMode, Input
 
 		FormatTime, TimeString,YYMMDDHH24MISS,yyMMddhhmmss
@@ -87,6 +88,7 @@ If InStr( ScannedCode, %TagPrefix%)
 	
 else
 {
+Msgbox, Did not find ITS tag
 Run, %ScannedCode%/checkout
 }
 
