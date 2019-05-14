@@ -154,7 +154,7 @@ A1:
 	Send, {Tab 1}
 	Sleep, 100
 	Send, {Space}
-	Sleep 5000
+	Sleep 100
 	Goto, ClickIfOneOption
 }
 
@@ -200,7 +200,7 @@ A2:
 	Send, {Tab 2}
 	Sleep, 100
 	Send, {Space}
-	Sleep 5000
+	Sleep 100
 	Goto, ClickIfOneOption
 }
 
@@ -245,7 +245,7 @@ A3:
 	Send, {Tab}
 	Sleep, 100
 	Send, {Space}
-	Sleep 5000
+	Sleep 100
 	Goto, ClickIfOneOption
 }
 
