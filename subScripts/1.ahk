@@ -119,6 +119,7 @@ A1:
 	;msgbox,Clicked %f1% a.k.a. User
 	imagesearch1:				; Image search to look for Select a User (to be able to click it)
 		Loop {
+			Msgbox, Going to look for: %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-UserSelected.PNG
 			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *100 %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-UserSelected.PNG
 				if ErrorLevel = 0
 					{
@@ -145,7 +146,7 @@ A1:
 				
 				else if ErrorLevel = 2
 					{   
-					MsgBox, Could not conduct search, maybe I could not find the image file?
+					MsgBox, A1 - Could not conduct search, maybe I could not find the image file?
 					break
 					}	
 				}	
@@ -190,7 +191,7 @@ A2:
 				
 				else if ErrorLevel = 2
 					{   
-					MsgBox, Could not conduct search, maybe I could not find the image file?
+					MsgBox, A1 - Could not conduct search, maybe I could not find the image file?
 					break
 					}	
 				}
@@ -235,7 +236,7 @@ A3:
 				
 				else if ErrorLevel = 2
 					{   
-					MsgBox, Could not conduct search, maybe I could not find the image file?
+					MsgBox, A3 - Could not conduct search, maybe I could not find the image file?
 					break
 					}	
 				}
@@ -281,12 +282,53 @@ ClickIfOneOption:
 				
 				else if ErrorLevel = 2
 					{   
-					MsgBox, Could not conduct search, maybe I could not find the image file?
+					MsgBox, ClickIfOneOption - Could not conduct search, maybe I could not find the image file?
 					break
 					}	
 				}
 						
-	PostActions4:			
+	PostActions4:
+	Goto, CheckIfSuccess	
+	ExitApp
+}
+
+CheckIfSuccess:
+{
+	;msgbox,Running CheckIfSuccess
+	imagesearch5:				; Image search to look for Select a User (to be able to click it)
+		Loop {
+			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *100 %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-CheckoutSuccessful.PNG
+				if ErrorLevel = 0
+					{
+						MsgBox, Found the Loading more results... at %FoundX%x%FoundY%, pressing enter after ok...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
+						Sleep 20
+						;Click, %FoundX%, %FoundY%, 1
+						SoundPlay, %A_ScriptDir%\audio\1-AssetCheckoutSuccessful.mp3
+						Goto, PostActions5
+					}
+				
+				
+				
+				
+				else if ErrorLevel = 1
+					{   
+					;MsgBox, Loading More Results not found, searching again...			;Delete the semicolon at char 1 here to debug to display popup box with variable in it
+					imagesearch3 :=
+					}
+				
+				
+				
+				
+				else if ErrorLevel = 2
+					{   
+					MsgBox, CheckIfSuccess - Could not conduct search, maybe I could not find the image file?
+					break
+					}	
+				}
+						
+	PostActions5:
+	Sleep, 2000
+	Send, {Ctrl Down}w{Ctrl Up}
 	ExitApp
 }
 
