@@ -327,7 +327,7 @@ CheckIfSuccess:
 				}
 						
 	PostActions5:
-	Sleep, 2000
+	Sleep, 4000
 	Send, {Ctrl Down}w{Ctrl Up}
 	ExitApp
 }
