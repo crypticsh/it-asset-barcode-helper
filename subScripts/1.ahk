@@ -301,10 +301,10 @@ CheckIfSuccess:
 	;msgbox,Running CheckIfSuccess
 	imagesearch5:				; Image search to look for Select a User (to be able to click it)
 		Loop {
-			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *100 %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-CheckoutSuccessful.PNG
+			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *125 %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-CheckoutSuccessful.PNG
 				if ErrorLevel = 0
 					{
-						;MsgBox, Found the Loading more results... at %FoundX%x%FoundY%, pressing enter after ok...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
+						MsgBox, Found Checkout successfull at %FoundX%x%FoundY%, pressing enter after ok...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
 						Sleep 20
 						;Click, %FoundX%, %FoundY%, 1
 						SoundPlay, %A_ScriptDir%\audio\1-AssetCheckoutSuccessful.mp3
@@ -316,7 +316,7 @@ CheckIfSuccess:
 				
 				else if ErrorLevel = 1
 					{   
-					;MsgBox, Loading More Results not found, searching again...			;Delete the semicolon at char 1 here to debug to display popup box with variable in it
+					MsgBox, Did not find checkout successful, searching again...			;Delete the semicolon at char 1 here to debug to display popup box with variable in it
 					imagesearch3 :=
 					}
 				
