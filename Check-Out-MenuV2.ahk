@@ -12,7 +12,7 @@ F9=%A_ScriptDir%\MenuBarcodes\9.png
 ;	Add Pictures of barcodes to menu
 Gui Add, Picture, gA1 x5 y10 w450 h220,%f1%
 Gui Add, Picture, gA2 x460 y10 w450 h220,%f2%
-;Gui Add, Picture, gA3 x915 y10 w450 h220,%f3%
+Gui Add, Picture, gA3 x915 y10 w450 h220,%f3%
 
 ;Gui Add, Picture, gA4 x5 y240 w450 h220,%f4%
 ;Gui Add, Picture, gA5 x460 y240 w450 h220,%f5%
