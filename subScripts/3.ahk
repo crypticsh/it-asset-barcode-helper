@@ -64,3 +64,7 @@ ExitApp
 
 
 Esc::ExitApp
+
+GuiClose:
+GuiEscape:
+ExitApp

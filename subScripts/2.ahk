@@ -57,3 +57,9 @@ Run, %SnipeITURL%/hardware/%idOfTag%/checkin
 
 
 ExitApp
+
+Esc::ExitApp
+
+GuiClose:
+GuiEscape:
+ExitApp

@@ -44,23 +44,26 @@ return
 
 OK2:
 Gui, Submit
-Gui, Destroy
+
 
 ;	if statements to go to proper option if option is typed or scanned in instead of being clicked
 
 Img1:
 ImgOption=A1
 ;Msgbox, %ImgOption%
+Gui, Cancel
 GoTo, Continue1
 
 Img2:
 ImgOption=A2
 ;Msgbox, %ImgOption%
+Gui, Cancel
 GoTo, Continue1
 
 Img3:
 ImgOption=A3
 ;Msgbox, %ImgOption%
+Gui, Cancel
 GoTo, Continue1
 
 Continue1:
@@ -337,5 +340,10 @@ CheckIfSuccess:
 ExitApp
 
 
-;Esc::ExitApp
-Esc::Reload
+;Esc::Reload
+
+Esc::ExitApp
+
+GuiClose:
+GuiEscape:
+ExitApp
