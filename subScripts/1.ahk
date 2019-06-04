@@ -44,6 +44,7 @@ return
 
 OK2:
 Gui, Submit
+Gui, Destroy
 
 ;	if statements to go to proper option if option is typed or scanned in instead of being clicked
 
