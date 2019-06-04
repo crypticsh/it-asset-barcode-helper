@@ -33,7 +33,7 @@ return
 OK:
 Gui, Submit
 
-If InStr( ScannedCode, "%TagPrefix%")
+IfInString, ScannedCode, %TagPrefix%
 	{
 		SendMode, Input
 
