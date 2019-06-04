@@ -66,7 +66,7 @@ Continue1:
 
 IfInString, ScannedCode, %TagPrefix%
 	{
-		Msgbox, Found ITS tag
+		;Msgbox, Found ITS tag
 		SendMode, Input
 
 		FormatTime, TimeString,YYMMDDHH24MISS,yyMMddhhmmss
@@ -88,7 +88,7 @@ IfInString, ScannedCode, %TagPrefix%
 	
 else
 {
-Msgbox, Did not find ITS tag
+;Msgbox, Did not find ITS tag
 Run, %ScannedCode%/checkout
 }
 
@@ -119,7 +119,7 @@ A1:
 	;msgbox,Clicked %f1% a.k.a. User
 	imagesearch1:				; Image search to look for Select a User (to be able to click it)
 		Loop {
-			Msgbox, Going to look for: %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-UserSelected.PNG
+			;Msgbox, Going to look for: %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-UserSelected.PNG
 			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *100 %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-UserSelected.PNG
 				if ErrorLevel = 0
 					{
@@ -300,7 +300,7 @@ CheckIfSuccess:
 			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *100 %A_ScriptDir%\images\%MenuNumber%\%ChromeScaling%-CheckoutSuccessful.PNG
 				if ErrorLevel = 0
 					{
-						MsgBox, Found the Loading more results... at %FoundX%x%FoundY%, pressing enter after ok...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
+						;MsgBox, Found the Loading more results... at %FoundX%x%FoundY%, pressing enter after ok...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
 						Sleep 20
 						;Click, %FoundX%, %FoundY%, 1
 						SoundPlay, %A_ScriptDir%\audio\1-AssetCheckoutSuccessful.mp3
