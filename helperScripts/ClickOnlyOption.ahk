@@ -6,7 +6,7 @@ CheckForOneMatch:
 	;msgbox,Running CheckIfSuccess
 	imagesearch5:				; Image search to look for Select a User (to be able to click it)
 		Loop {
-			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *25 %A_ScriptDir%\images\OneMatchLoadingSelect.PNG
+			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *5 %A_ScriptDir%\images\OneMatchLoadingSelect.PNG
 				if ErrorLevel = 0
 					{
 						;MsgBox, Found Checkout successfull at %FoundX%x%FoundY%, pressing enter after ok...				;Delete the semicolon at char 1 here to debug to display popup box with variable in it
